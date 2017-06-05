@@ -25,6 +25,12 @@ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 
 Go to your working folder and create a directory called data, your videos and images should go here. Also create a folder called output.
 
+```
+cd $WORKING_DIR
+mkdir data
+mkdir output
+```
+
 Run the docker container
 ```
 sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface:tag
