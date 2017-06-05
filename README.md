@@ -27,7 +27,7 @@ Go to your working folder and create a directory called data, your videos and im
 
 Run the docker container
 ```
-sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface
+sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface:tag
 ```
 
 Once inside the container use this command to process videos
