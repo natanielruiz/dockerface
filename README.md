@@ -4,7 +4,7 @@
 
 The docker image is large for now because OpenCV has to be compiled and stored in the image to be able to use video and it takes up 7+ GB of space.
 
-###Instructions
+### Instructions
 
 Install NVIDIA Cuda 8 and cudnn v5
 ```
