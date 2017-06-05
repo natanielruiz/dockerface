@@ -43,5 +43,5 @@ python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FIL
 
 Voila, that easy!
 
-Nataniel Ruiz
+Nataniel Ruiz<br>
 Georgia Institute of Technology
