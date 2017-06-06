@@ -1,6 +1,6 @@
 ## Docker solution for face detection using Faster R-CNN
 <div align="center">
-  <img src="http://i.imgur.com/2tdfLH5.jpg" width="150"><br><br>
+  <img src="http://i.imgur.com/2tdfLH5.jpg" width="300"><br><br>
 </div>
 
 **dockerface** is a docker image solution for face detection in videos and images. It deploys a trained Faster R-CNN network on Caffe through an easy to use docker image. Bring your videos and images, run dockerface and obtain videos and images with bounding boxes of face detections and an easy to use face detection annotation text file.
