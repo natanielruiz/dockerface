@@ -57,6 +57,24 @@ python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FIL
 
 Voila, that easy!
 
+After you're done with the docker container you can exit.
+```
+exit
+```
+
+You want to restart and re-attach to this same docker container so as to avoid compiling Caffe again. To do this first get the id for that container.
+```
+sudo docker ps -a
+```
+
+It should be the last one that was launched. Take note of CONTAINER ID. Then start and attach to that container.
+```
+sudo docker start CONTAINER_ID
+sudo docker attach CONTAINER_ID
+```
+
+You can now continue processing videos.
+
 *Nataniel Ruiz<br>
 Georgia Institute of Technology*
 
