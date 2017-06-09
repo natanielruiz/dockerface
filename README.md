@@ -26,7 +26,7 @@ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nv
 sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 ```
 
-Go to your working folder and create a directory called data, your videos and images should go here. Also create a folder called output.
+Go to your working folder and create a directory called data, **your videos and images should go here**. Also create a folder called output.
 
 ```
 cd $WORKING_DIR
@@ -39,7 +39,18 @@ Run the docker container
 sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface:tag
 ```
 
-Once inside the container use this command to process videos
+Now we have to recompile Caffe for it to work on your own machine.
+```
+cd caffe-fast-rcnn
+rm -rf build
+mkdir build
+cd build
+cmake ..
+make -j20
+cd ../..
+```
+
+Finally use this command to process videos
 ```
 python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME
 ```
