@@ -36,7 +36,7 @@ mkdir output
 
 Run the docker container
 ```
-sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface:tag
+sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface:latest
 ```
 
 Now we have to recompile Caffe for it to work on your own machine.
