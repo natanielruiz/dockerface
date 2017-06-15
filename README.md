@@ -52,8 +52,9 @@ cd ../..
 
 Finally use this command to process videos
 ```
-python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME
+python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME --conf_thresh CONFIDENCE_THRESHOLD_FOR_DETECTIONS
 ```
+The default confidence threshold is 0.85 which works for high quality videos where the faces are clearly visible. You can play around with this value.
 
 Voila, that easy!
 
