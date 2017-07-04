@@ -3,7 +3,7 @@
   <img src="http://i.imgur.com/2tdfLH5.jpg" width="300"><br><br>
 </div>
 
-**dockerface** is the first deep learning docker solution for face detection in images and videos. It deploys a trained Faster R-CNN network on Caffe through an easy to use docker image. Bring your videos and images, run dockerface and obtain videos and images with bounding boxes of face detections and an easy to use face detection annotation text file.
+**dockerface** is a deep learning replacement for dlib and OpenCV non-deep face detection. It deploys a trained Faster R-CNN network on Caffe through an easy to use docker image. Bring your videos and images, run dockerface and obtain videos and images with bounding boxes of face detections and an easy to use face detection annotation text file.
 
 The docker image is large for now because OpenCV has to be compiled and stored in the image to be able to use video and it takes up 7+ GB of space.
 
@@ -36,7 +36,7 @@ mkdir output
 
 Run the docker container
 ```
-sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video natanielruiz/dockerface:latest
+sudo nvidia-docker run -it -v $PWD/data:/opt/py-faster-rcnn/edata -v $PWD/output/video:/opt/py-faster-rcnn/output/video -v $PWD/output/images:/opt/py-faster-rcnn/output/images natanielruiz/dockerface:latest
 ```
 
 Now we have to recompile Caffe for it to work on your own machine.
@@ -54,7 +54,13 @@ Finally use this command to process videos
 ```
 python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME --conf_thresh CONFIDENCE_THRESHOLD_FOR_DETECTIONS
 ```
-The default confidence threshold is 0.85 which works for high quality videos where the faces are clearly visible. You can play around with this value.
+
+Use this command to process images
+```
+python tools/run_face_detection_on_video.py --gpu 0 --image edata/YOUR_IMAGE_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME --conf_thresh CONFIDENCE_THRESHOLD_FOR_DETECTIONS
+```
+
+The default confidence threshold is 0.85 which works for high quality videos or images where the faces are clearly visible. You can play around with this value.
 
 Voila, that easy!
 
