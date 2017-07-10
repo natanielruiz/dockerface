@@ -9,7 +9,7 @@ The docker image is large for now because OpenCV has to be compiled and stored i
 
 ### Instructions
 
-Install NVIDIA Cuda 8 and cudnn v5
+Install NVIDIA CUDA (8 - preferably) and cuDNN (v5 - preferably)
 ```
 https://developer.nvidia.com/cuda-downloads
 https://developer.nvidia.com/cudnn
