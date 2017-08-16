@@ -7,6 +7,8 @@
 
 The docker image is large for now because OpenCV has to be compiled and stored in the image to be able to use video and it takes up a lot of space.
 
+Technical details and some experiments are described in the [Arxiv Tech Report](https://arxiv.org/abs/1708.04370).
+
 ### Citing Dockerface
 
 If you find Dockerface useful in your research please consider citing:
