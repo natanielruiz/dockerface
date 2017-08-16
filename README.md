@@ -7,6 +7,26 @@
 
 The docker image is large for now because OpenCV has to be compiled and stored in the image to be able to use video and it takes up a lot of space.
 
+### Citing Dockerface
+
+If you find Dockerface useful in your research please consider citing:
+
+```
+@ARTICLE{2017arXiv170804370R,
+   author = {{Ruiz}, N. and {Rehg}, J.~M.},
+    title = "{Dockerface: an easy to install and use Faster R-CNN face detector in a Docker container}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1708.04370},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2017,
+    month = aug,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170804370R},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+```
+
 ### Instructions
 
 Install NVIDIA CUDA (8 - preferably) and cuDNN (v5 - preferably)
