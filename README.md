@@ -72,14 +72,19 @@ make -j20
 cd ../..
 ```
 
-Finally use this command to process videos
+Finally use this command to **process a video**
 ```
 python tools/run_face_detection_on_video.py --gpu 0 --video edata/YOUR_VIDEO_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME --conf_thresh CONFIDENCE_THRESHOLD_FOR_DETECTIONS
 ```
 
-Use this command to process images
+Use this command to **process an image**
 ```
 python tools/run_face_detection_on_video.py --gpu 0 --image edata/YOUR_IMAGE_FILENAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME --conf_thresh CONFIDENCE_THRESHOLD_FOR_DETECTIONS
+```
+
+Also if you are looking to conveniently **process all images in one folder** use this command
+```
+python tools/facedetection_images.py --gpu 0 --image_folder edata/IMAGE_FOLDER_NAME --output_string STRING_TO_BE_APPENDED_TO_OUTPUTFILE_NAME --conf_thresh CONFIDENCE_THRESHOLD_FOR_DETECTIONS
 ```
 
 The default confidence threshold is 0.85 which works for high quality videos or images where the faces are clearly visible. You can play around with this value.
