@@ -91,13 +91,13 @@ The default confidence threshold is 0.85 which works for high quality videos or 
 
 The columns contained in the output text files are:
 
-For videos:
+For **videos**:
 
-frame_number x_min y_min x_max y_max confidence_score
+*frame_number x_min y_min x_max y_max confidence_score*
 
-For images:
+For **images**:
 
-image_path x_min y_min x_max y_max confidence_score
+*image_path x_min y_min x_max y_max confidence_score*
 
 Where (x_min,y_min) denote the coordinates of the upper-left corner of the bounding box in image intrinsic coordinates and (x_max, y_max) denote the coordinates of the lower-right corner of the bounding box in image intrinsic coordinates. (ref. https://www.mathworks.com/help/images/image-coordinate-systems.html)
 confidence_score denotes the probability output of the model that the detection is correct (it is a number included in [0,1])
