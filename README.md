@@ -122,8 +122,7 @@ sudo docker attach CONTAINER_ID
 
 You can now continue processing videos.
 
-*Nataniel Ruiz<br>
-James M. Rehg<br>
+*Nataniel Ruiz and James M. Rehg<br>
 Georgia Institute of Technology*
 
 Credits:
