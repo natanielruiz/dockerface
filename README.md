@@ -3,7 +3,7 @@
   <img src="http://i.imgur.com/2tdfLH5.jpg" width="300"><br><br>
 </div>
 
-**Dockerface** is a deep learning replacement for dlib and OpenCV non-deep face detection. It deploys a trained Faster R-CNN network on Caffe through an easy to use docker image. Bring your videos and images, run dockerface and obtain videos and images with bounding boxes of face detections and an easy to use face detection annotation text file.
+**Dockerface** is a deep learning face detector. It deploys a trained Faster R-CNN network on Caffe through an easy to use docker image. Bring your videos and images, run dockerface and obtain videos and images with bounding boxes of face detections and an easy to use face detection annotation text file.
 
 The docker image is large for now because OpenCV has to be compiled and stored in the image to be able to use video and it takes up a lot of space.
 
