@@ -1,4 +1,4 @@
-## Docker Solution for Face Detection Using Faster R-CNN
+## Face Detection Docker Solution Using Faster R-CNN
 <div align="center">
   <img src="http://i.imgur.com/2tdfLH5.jpg" width="300"><br><br>
 </div>
